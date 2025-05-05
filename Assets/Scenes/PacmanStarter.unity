@@ -399,8 +399,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db479791ffe5f7943b26b5ee18e47290, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pacman: {fileID: 0}
-  pellets: {fileID: 6089054482580266406, guid: e4ac4d8863d195144a350ef3d4006632, type: 3}
+  pacman: {fileID: 1778816268}
+  pellets: {fileID: 1910537628}
   gameOverText: {fileID: 1133529214}
   scoreText: {fileID: 1945791160}
   livesText: {fileID: 278868602}
@@ -7486,6 +7486,7 @@ GameObject:
   - component: {fileID: 1778816267}
   - component: {fileID: 1778816266}
   - component: {fileID: 1778816265}
+  - component: {fileID: 1778816268}
   - component: {fileID: 1778816264}
   m_Layer: 6
   m_Name: Pacman
@@ -7577,7 +7578,7 @@ MonoBehaviour:
   initialDirection: {x: 1, y: 0}
   obstacleLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 512
 --- !u!95 &1778816265
 Animator:
   serializedVersion: 5
@@ -7633,7 +7634,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.9375
+  m_Radius: 0.9
 --- !u!50 &1778816267
 Rigidbody2D:
   serializedVersion: 4
@@ -7661,6 +7662,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &1778816268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1778816261}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8789c38bbff2124e9506a025fecbe65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1910537627
 GameObject:
   m_ObjectHideFlags: 0

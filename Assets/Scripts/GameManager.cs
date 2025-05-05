@@ -55,6 +55,7 @@ public class GameManager : MonoBehaviour
     private void ResetState()
     {
         // reset pacman state
+        pacman.ResetState();
 
     }
 
@@ -72,7 +73,27 @@ public class GameManager : MonoBehaviour
 
     public void PelletEaten(Pellet pellet)
     {
-        
+        pellet.gameObject.SetActive(false);
+        SetScore(score + pellet.points);
+        if (!HasRemainingPellets())
+        {
+            pacman.gameObject.SetActive(false);
+            Invoke(nameof(NewRound), 3f);
+        }
+
+    }
+
+    private bool HasRemainingPellets()
+    {
+        foreach (Transform pellet in pellets)
+        {
+            if (pellet.gameObject.activeSelf)
+            {
+                return true;
+            }
+        }
+
+        return false;
     }
 
 }
